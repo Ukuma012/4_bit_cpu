@@ -3,7 +3,7 @@
 
 module alu import lib_cpu :: *, lib_operation ** *; (
     input OPECODE opecode,
-    input logic [3:0] imm,
+    input logic [7:0] imm,
     input logic [3:0] switch,
     input REGS        current,
     output REGS       next

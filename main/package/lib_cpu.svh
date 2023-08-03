@@ -2,7 +2,8 @@
 `define LIB_CPU_SVH
     package lib_cpu;
         typedef struct packed {
-            logic [3:0] a, b, ip, out;
+            logic [7:0] a, b, ip;
+            logic [3:0] out;
             logic cf;
         } REGS;
 

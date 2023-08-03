@@ -1,14 +1,15 @@
 `include "lib_cpu.svh"
 
 module decoder import lib_cpu :: *; (
-    input logic [7:0] data,
+    input logic [15:0] data,
     output OPECODE opecode;
-    output logic [3:0] imm
+    output logic [7:0] imm
 );
-    assign imm = data[3:0];
+    assign imm = data[7:0];
 
     always_comb begin
-        unique case (data[7:4])
+        unique case (data[15:8])
+            // @TODO 8bit化
             4'b0001: opecode = MOV_A_B;
             4'b0100: opecode = MOV_B_A;
             4'b0011: opecode = MOV_A_IMM;

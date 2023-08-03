@@ -1,5 +1,6 @@
 // timer
 // 4bitなので16stepしか実行できない
+// @TODO 8bit化
 60      // 4'b0000: data = 8'b0110_0000;     IN  B 
 90      // 4'b0001: data = 8'b1001_0000;     OUT B
 3D      // 4'b0010: data = 8'b0011_1101;    MOV A, 13 
